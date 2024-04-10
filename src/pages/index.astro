@@ -1,0 +1,59 @@
+---
+import Badge from "../components/Badge.astro";
+import Layout from "../layouts/Layout.astro";
+import LinkedinIcon from "../icons/Linkedin.astro"
+import SocialPill from "../components/SocialPill.astro"
+import GithubIcon from "../icons/GithubIcon.astro"
+import MailIcon from "../icons/MailIcon.astro"
+---
+
+<Layout title="Portfolio de Agustin Hahn - Desarrollador y programador web"
+	description="Contratame para construir soluciones"
+>
+	<main>
+		<section class="2-full lg:w-[740px] mx-auto py-44">
+			<img class="rounded-full w-12 h-12"
+			src="https://img.olympics.com/images/image/private/t_1-1_300/f_auto/v1687307644/primary/cqxzrctscdr8x47rly1g" 
+			alt="linyefoto" />
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-1">
+				Hey, soy linyericida<a href="https://www.linkedin.com/in/agustin-hahn-766b98183/" 
+				target="_blank" 
+				rel="noopener"
+				class="flex justify-center items-center">
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-2xl text-wrap">
+				<span >
+					+1 año de experiencia renegando.
+				</span>
+				<span class="text-yellow-200/90">
+					Desarrollador frontend.
+				</span>
+				<span class="text-red-100/90">
+					de Rosario, argentina.
+				</span>
+			</h2>
+			<nav class="flex gap-x-3 mt-5">
+				<SocialPill href="https://www.linkedin.com/in/agustin-hahn-766b98183/">
+					<LinkedinIcon class="w-6 h-6"/>
+						<span class="fontSize">LinkedIn</span>
+				</SocialPill>
+				<SocialPill href="">
+					<GithubIcon class="w-6 h-6" />
+					<span class="fontSize">Github</span>
+				</SocialPill>
+				<SocialPill href="">
+					<MailIcon class="w-6 h-6" />
+					<span class="fontSize">agustin.f.hahn@gmail.com</span>
+				</SocialPill>
+			</nav>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.fontSize{
+		font-size:15px
+	}
+</style>
