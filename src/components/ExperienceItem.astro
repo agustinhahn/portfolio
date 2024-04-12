@@ -10,7 +10,7 @@ const { title, description, link, date } = Astro.props;
 ---
 
 <span
-    class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900"
+    class="absolute flex items-center justify-center size-3 bg-blue-100 rounded-full mt-2 -start-2 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900"
 >
     <svg
         class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300"
@@ -27,16 +27,14 @@ const { title, description, link, date } = Astro.props;
 <h3
     class="flex items-center mb-1 text-lg font-semibold text-yellow-200 dark:text-white mt-2"
 >
-    {title} <span
-        class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3"
-        >nada</span
-    >
+    {title}
 </h3>
 <time
     class="block mb-2 text-sm font-normal leading-none text-gray-400 text-skey-200/88"
     >{date}</time
 >
-<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-200 text-pretty">
+<p
+    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-200 text-pretty"
+>
     {description}
 </p>
-

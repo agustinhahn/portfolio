@@ -1,0 +1,33 @@
+---
+import SocialPill from "./SocialPill.astro"
+import LinkedinIcon from "../icons/Linkedin.astro"
+import MailIcon from "../icons/MailIcon.astro"
+import GithubIcon from "../icons/GithubIcon.astro"
+---
+
+<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+    <span>
+        +1 año de experiencia aprendiendo y creando proyectos
+        resolutivos.</span
+    >
+    <span class="text-yellow-200/90">
+        Desarrollador frontend.
+    </span>
+    <span class="text-blue-100/70"> de Rosario, argentina. </span>
+</h2>
+<nav class="flex gap-4 mt-8 flex-wrap">
+    <SocialPill
+        href="https://www.linkedin.com/in/agustin-hahn-766b98183/"
+    >
+        <LinkedinIcon class="size-4 md:size-6" />
+        <span class="fontSize">LinkedIn</span>
+    </SocialPill>
+    <SocialPill href="">
+        <MailIcon class="size-4 md:size-6" />
+        <span class="fontSize">agustin.f.hahn@gmail.com</span>
+    </SocialPill>
+    <SocialPill href="">
+        <GithubIcon class="size-4 md:size-6" />
+        <span class="fontSize">Github</span>
+    </SocialPill>
+</nav>
