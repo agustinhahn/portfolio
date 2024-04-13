@@ -1,6 +1,8 @@
 ---
 import NetxIcon from "../icons/NextIcon.astro"
 import TailwindIcon from "../icons/TailwindIcon.astro"
+import ButtonVerMas from "./ButtonVerMas"
+
 const TAGS = {
     NEXT: {
         name: "Next.js",
@@ -16,7 +18,7 @@ const TAGS = {
 
 const PROJECTS = [
     {
-        id: 1,
+        idItem: 1,
         title: "portfolio",
         description:
             "A simple weather application that displays the current weather based on the user's location.",
@@ -26,7 +28,7 @@ const PROJECTS = [
         tags: [TAGS.NEXT, TAGS.TAILWIND],
     },
     {
-        id: 2,
+        idItem: 2,
         title: "Personal Blog",
         description:
             "A personal blog website built with Astro for static site generation.",
@@ -36,7 +38,7 @@ const PROJECTS = [
         tags: [TAGS.NEXT, TAGS.TAILWIND],
     },
     {
-        id: 3,
+        idItem: 3,
         title: "Todo App",
         description:
             "A simple todo list application built with React for managing tasks.",
@@ -47,12 +49,10 @@ const PROJECTS = [
     },
 ];
 
-console.log(PROJECTS[0].id)
-
 ---
 
 {
-    PROJECTS.map(({ title, description, tags, image, id }) => (
+    PROJECTS.map(({ title, description, tags, image, idItem }) => (
         <article class="w-80 mb-8">
             <div class="flex">
                 <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>

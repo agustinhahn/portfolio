@@ -1,4 +1,14 @@
 ---
+interface Props {
+    idItem: number;
+	title: string;
+	description: string;
+    link: string;
+    github: string;
+    tags: [string]
+}
+
+
 import Badge from "../components/Badge.astro";
 import Layout from "../layouts/Layout.astro";
 import Experience from "../components/Experience.astro";
