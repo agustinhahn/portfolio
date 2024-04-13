@@ -9,6 +9,8 @@ import Proyectos from "../components/Proyectos.astro";
 import UserIcon from "../icons/UserIcon.astro"
 import Presentacion from "../components/Presentacion.astro";
 import About from "../components/About.astro"
+import CarrouselProyectos from "../components/CarrouselProyectos.astro";
+import CarrouselComponent from "../components/CarrouselComponent.astro";
 ---
 
 <Layout
@@ -49,7 +51,9 @@ import About from "../components/About.astro"
 				<ProyectosIcon class="size-7" />
 				Proyectos
 			</h2>
-			<Proyectos />
+			<section class="flex flex-wrap justify-between">
+				<Proyectos />
+			</section>
 		</SectionContainer>
 		<SectionContainer id="experiencia">
 			<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
