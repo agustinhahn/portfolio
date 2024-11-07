@@ -3,6 +3,8 @@ interface Props {
     idItem: number;
 	title: string;
 	description: string;
+	details:string;
+	tecnologies:string;
     link: string;
     github: string;
     tags: [string]
@@ -21,7 +23,11 @@ import Presentacion from "../components/Presentacion.astro";
 import About from "../components/About.astro"
 import CarrouselProyectos from "../components/CarrouselProyectos.astro";
 import CarrouselComponent from "../components/CarrouselComponent.astro";
+import EfectoEscritura from "../components/EfectoEscritura";
+
 ---
+
+
 
 <Layout
 	title="Portfolio de Agustin Hahn - Desarrollador y programador web"
@@ -35,20 +41,8 @@ import CarrouselComponent from "../components/CarrouselComponent.astro";
 					src="https://img.olympics.com/images/image/private/t_1-1_300/f_auto/v1687307644/primary/cqxzrctscdr8x47rly1g"
 					alt="linyefoto"
 				/>
-				<div class="flex flex-col justify-center">
-					<h1
-						class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-1 items-center"
-					>
-						Hola, soy Agustin
-					</h1>
-					<a
-						href="https://www.linkedin.com/in/agustin-hahn-766b98183/"
-						target="_blank"
-						rel="noopener"
-						class="flex justify-center items-center"
-					>
-						<Badge>Disponible para trabajar</Badge>
-					</a>
+				<div class="flex flex-col justify-center min-w-96">
+					<EfectoEscritura client:load/>
 				</div>
 			</div>
 			<Presentacion />
