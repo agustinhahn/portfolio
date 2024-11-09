@@ -132,6 +132,10 @@ const Proyectos = () =>{
   ];
   
   const [showFirstImage, setShowFirstImage] = useState(true);
+
+  const handleChangeImage = () =>{
+    setShowFirstImage(!showFirstImage)
+  }
   
   return(
     <>
@@ -150,30 +154,35 @@ const Proyectos = () =>{
       <p class="text-md mb-4 text-pretty">{description}</p>
       <p class="text-md mb-4 text-pretty">{details}</p>
       <p class="text-md mb-4 text-pretty">{tecnologies}</p>
-      <div class="flex gap-8">
-        {/* Condicional para mostrar la primera imagen */}
-        {showFirstImage && (
+      <div class="flex gap-8 mt-8">
+        {showFirstImage ? (<>
           <img
             class="transition-all duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-150"
-            style={{ width: '540px' }}
+            style={{ width: '450px' }}
             src={image}
             alt={`captura de pantalla del proyecto ${title}`}
           />
-        )}
+       
         <img
           class="transition-all duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-150"
-          style={{ width: '540px' }}
+          style={{ width: '450px' }}
           src={image2}
           alt={`captura de pantalla del proyecto ${title}`}
-        />
+        /></> ):(<>
         <img
           class="transition-all duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-150"
-          style={{ width: '540px' , display:'none'}}
+          style={{ width: '450px' , display:'none'}}
           src={image3}
           alt={`captura de pantalla del proyecto ${title}`}
         />
+                <img
+          class="transition-all duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-150"
+          style={{ width: '450px' , display:'none'}}
+          src={image3}
+          alt={`captura de pantalla del proyecto ${title}`}
+        /></>)}
         <button
-          onClick={() => setShowFirstImage(!showFirstImage)}
+          onClick={handleChangeImage}
           style={{ backgroundColor: "red", height: "30px" }}
         >
           probando
