@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import PngFlotante from './PngFlotante';
 
 const Proyectos = () =>{
   const TAGS = {
@@ -29,10 +30,7 @@ const Proyectos = () =>{
       tecnologies: "",
       link: "https://example.com/weather-app",
       github: "https://github.com/yourusername/weather-app",
-      image: "/fotosProyectos/escaperoom/foto1.png",
-      image2: "/fotosProyectos/escaperoom/foto2.png",
-      image3: "/fotosProyectos/escaperoom/foto3.png",
-      tags: [
+      images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png"],      tags: [
         TAGS.REACT,
         TAGS.CSS,
         TAGS.VITE,
@@ -50,9 +48,7 @@ const Proyectos = () =>{
       tecnologies: "",
       link: "https://example.com/personal-blog",
       github: "https://github.com/yourusername/personal-blog",
-      image: "https://via.placeholder.com/300x200",
-      image2: "https://via.placeholder.com/300x200",
-      image3: "https://via.placeholder.com/300x200",
+      images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png"],
       tags: [TAGS.REACT, TAGS.CSS , TAGS.VITE, TAGS.VERCEL],
     },
     {
@@ -64,9 +60,7 @@ const Proyectos = () =>{
       tecnologies: "a",
       link: "https://example.com/todo-app",
       github: "https://github.com/yourusername/todo-app",
-      image: "https://via.placeholder.com/300x200",
-      image2: "https://via.placeholder.com/300x200",
-      image3: "https://via.placeholder.com/300x200",
+      images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png"],
       tags: [TAGS.REACTNATIVE, TAGS.EXPO, TAGS.VITE],
     },
     {
@@ -79,9 +73,7 @@ const Proyectos = () =>{
       tecnologies: "",
       link: "https://example.com/todo-app",
       github: "https://github.com/yourusername/todo-app",
-      image: "https://via.placeholder.com/300x200",
-      image2: "https://via.placeholder.com/300x200",
-      image3: "https://via.placeholder.com/300x200",
+      images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png"],
       tags: [TAGS.REACT, TAGS.CSS , TAGS.NOTION, TAGS.VITE],
     },
     {
@@ -93,9 +85,7 @@ const Proyectos = () =>{
       tecnologies: "",
       link: "https://example.com/todo-app",
       github: "https://github.com/yourusername/todo-app",
-      image: "https://via.placeholder.com/300x200",
-      image2: "https://via.placeholder.com/300x200",
-      image3: "https://via.placeholder.com/300x200",
+      images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png"],
       tags: [TAGS.JS, TAGS.NODE],
     },
     {
@@ -108,9 +98,7 @@ const Proyectos = () =>{
       tecnologies: "",
       link: "https://example.com/todo-app",
       github: "https://github.com/yourusername/todo-app",
-      image: "https://via.placeholder.com/300x200",
-      image2: "https://via.placeholder.com/300x200",
-      image3: "https://via.placeholder.com/300x200",
+      images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png"],
       tags: [TAGS.PYTHON, TAGS.BASH],
     },
     {
@@ -123,24 +111,16 @@ const Proyectos = () =>{
       tecnologies: "",
       link: "https://example.com/todo-app",
       github: "https://github.com/yourusername/todo-app",
-      image: "https://via.placeholder.com/300x200",
-      image2: "https://via.placeholder.com/300x200",
-      image3: "https://via.placeholder.com/300x200",
+      images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png"],
       tags: [TAGS.REACT, TAGS.CSS , TAGS.VITE, TAGS.VERCEL],
     },
 
   ];
   
-  const [showFirstImage, setShowFirstImage] = useState(true);
-
-  const handleChangeImage = () =>{
-    setShowFirstImage(!showFirstImage)
-  }
-  
   return(
     <>
-  {PROJECTS.map(({ title, description, tags, details, tecnologies, image, image2, image3,index }) => (
-    <article class="mb-8" key={index}>
+  {PROJECTS.map(({ title, description, tags, details, tecnologies, images,index }) => (
+    <article class="mb-8 mt-8" key={index}>
       <div class="flex">
         <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
       </div>
@@ -154,40 +134,7 @@ const Proyectos = () =>{
       <p class="text-md mb-4 text-pretty">{description}</p>
       <p class="text-md mb-4 text-pretty">{details}</p>
       <p class="text-md mb-4 text-pretty">{tecnologies}</p>
-      <div class="flex gap-8 mt-8">
-        {showFirstImage ? (<>
-          <img
-            class="transition-all duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-150"
-            style={{ width: '450px' }}
-            src={image}
-            alt={`captura de pantalla del proyecto ${title}`}
-          />
-       
-        <img
-          class="transition-all duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-150"
-          style={{ width: '450px' }}
-          src={image2}
-          alt={`captura de pantalla del proyecto ${title}`}
-        /></> ):(<>
-        <img
-          class="transition-all duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-150"
-          style={{ width: '450px' , display:'none'}}
-          src={image3}
-          alt={`captura de pantalla del proyecto ${title}`}
-        />
-                <img
-          class="transition-all duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-150"
-          style={{ width: '450px' , display:'none'}}
-          src={image3}
-          alt={`captura de pantalla del proyecto ${title}`}
-        /></>)}
-        <button
-          onClick={handleChangeImage}
-          style={{ backgroundColor: "red", height: "30px" }}
-        >
-          probando
-        </button>
-      </div>
+      <PngFlotante images={images}   />
     </article>
   ))}</>)
 }

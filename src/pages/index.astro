@@ -7,11 +7,10 @@ interface Props {
 	tecnologies:string;
     link: string;
     github: string;
+	images:[string]
     tags: [string]
 }
 
-
-import Badge from "../components/Badge.astro";
 import Layout from "../layouts/Layout.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
@@ -21,9 +20,8 @@ import UserIcon from "../icons/UserIcon.astro"
 import Presentacion from "../components/Presentacion.astro";
 import About from "../components/About.astro"
 import Proyectos from "../components/Proyectos"
-import CarrouselProyectos from "../components/CarrouselProyectos.astro";
-import CarrouselComponent from "../components/CarrouselComponent.astro";
 import EfectoEscritura from "../components/EfectoEscritura";
+import PngFlotante from "../components/PngFlotante";
 
 ---
 
@@ -47,7 +45,6 @@ import EfectoEscritura from "../components/EfectoEscritura";
 			</div>
 			<Presentacion />
 		</SectionContainer>
-		
 		<SectionContainer id="proyectos">
 			<h2
 				class="text-4xl font-semibold mb-6 flex gap-x-3 items-center"
