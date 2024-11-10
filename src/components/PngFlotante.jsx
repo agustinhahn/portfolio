@@ -3,10 +3,9 @@ import Arrow from "./Arrow";
 
 const PngFlotante = ({ images}) => {
 
-    console.log(images)
   // Si `images` no tiene al menos 2 elementos, mostramos un mensaje o evitamos el renderizado.
   if (images.length < 2) {
-    return <p>Se necesitan al menos dos imágenes para el carrusel.</p>;
+    return <span></span>;
   }
 
   // Estado para el índice de la primera imagen mostrada

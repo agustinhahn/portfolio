@@ -17,6 +17,7 @@ const Proyectos = () =>{
     PYTHON: { name: "icono PYTHON", ruta: "/python.svg" },
     CSS: { name: "icono css", ruta: "/css.svg" },
     NOTION: { name: "icono notion", ruta: "/notion.svg" },
+    REDUX: {name:'icono redux', ruta:'/redux.svg'}
   };
   
   const PROJECTS = [
@@ -28,9 +29,9 @@ const Proyectos = () =>{
       details:
         "Este proyecto fue realizado junto con un desarrollador backend (JAVA + MySql) y una diseñadora grafica.",
       tecnologies: "",
-      link: "https://example.com/weather-app",
+      link: "https://escape-room-bay.vercel.app/",
       github: "https://github.com/yourusername/weather-app",
-      images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png"],      tags: [
+      images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png", "/fotosProyectos/escaperoom/foto4.png"],      tags: [
         TAGS.REACT,
         TAGS.CSS,
         TAGS.VITE,
@@ -43,12 +44,12 @@ const Proyectos = () =>{
       idItem: 2,
       title: "Respuestas rapidas",
       description:
-        "Solucion para empresa proveedora de internet que requeria almacenar y acceder de manera rapida a informacion y respuestas pre-establecidas para sus usuarios",
+        "Solucion para empresa proveedora de internet que requeria almacenar y acceder de manera rapida a informacion y respuestas pre-establecidas que se guardan en el copiapapeles de la PC con un solo click sobre el titulo, ademas del boton '+' que sirve para ver el contenido.",
       details: "",
       tecnologies: "",
-      link: "https://example.com/personal-blog",
+      link: "https://respuestas-rapidas.vercel.app/",
       github: "https://github.com/yourusername/personal-blog",
-      images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png"],
+      images:["/fotosProyectos/respuestasrapidas/foto1.png", "/fotosProyectos/respuestasrapidas/foto2.png"],
       tags: [TAGS.REACT, TAGS.CSS , TAGS.VITE, TAGS.VERCEL],
     },
     {
@@ -57,10 +58,10 @@ const Proyectos = () =>{
       description:
         "Proyecto personal desarrollado en react native con la simple funcion de llevar el recuento de puntos en un partido de truco. Se implementaron diseños a medida y sonidos alusivos a un grupo en concreto de personas.",
       details: "Este proyecto fue realizado junto con una diseñadora grafica.",
-      tecnologies: "a",
-      link: "https://example.com/todo-app",
+      tecnologies: "",
+      link: "https://github.com/agustinhahn/contadorTrucoRN",
       github: "https://github.com/yourusername/todo-app",
-      images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png"],
+      images:["/fotosProyectos/truco/foto1.png", "/fotosProyectos/truco/foto2.png"],
       tags: [TAGS.REACTNATIVE, TAGS.EXPO, TAGS.VITE],
     },
     {
@@ -71,10 +72,10 @@ const Proyectos = () =>{
       details:
         "La importancia en este proyecto recae en que fue con un grupo multidisciplinario el cual se conformaba por 1 ux, 4 backend, 4 front y un product manager. Aqui adquiri herramientas como JIRA y NOTION para la organizacion.",
       tecnologies: "",
-      link: "https://example.com/todo-app",
+      link: "",
       github: "https://github.com/yourusername/todo-app",
-      images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png"],
-      tags: [TAGS.REACT, TAGS.CSS , TAGS.NOTION, TAGS.VITE],
+      images:["/fotosProyectos/agendasalud/foto1.png", "/fotosProyectos/agendasalud/foto2.png"],
+      tags: [TAGS.REACT, TAGS.CSS ,TAGS.REDUX ,  TAGS.NOTION, TAGS.VITE],
     },
     {
       idItem: 5,
@@ -83,22 +84,22 @@ const Proyectos = () =>{
         "Solucion para empresa proveedora de internet que requeria informes via email tras cierta incidencia tecnica relacionada con FTTH.",
       details: "Desarrollado con NODEjs y utilizado en varios ISP locales.",
       tecnologies: "",
-      link: "https://example.com/todo-app",
+      link: "https://github.com/agustinhahn/scriptlost",
       github: "https://github.com/yourusername/todo-app",
-      images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png"],
+      images:[""],
       tags: [TAGS.JS, TAGS.NODE],
     },
     {
       idItem: 6,
-      title: "Fast Ip",
+      title: "Easy Ip",
       description:
         "Solucion para tecnicos de redes, en la que se facilita una interfaz grafica para testear o cambiar IP estatica en la computadora y asi agilizar procesos.",
       details:
         "Desarrollado con python aunque luego se llevo a una version mas simple en bash.",
       tecnologies: "",
-      link: "https://example.com/todo-app",
+      link: "",
       github: "https://github.com/yourusername/todo-app",
-      images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png"],
+      images:["/fotosProyectos/easyip/foto1.png", "/fotosProyectos/easyip/foto2.png"],
       tags: [TAGS.PYTHON, TAGS.BASH],
     },
     {
@@ -107,11 +108,11 @@ const Proyectos = () =>{
       description:
         "Proyecto personal creado con el fin de ordenar ciertas tareas diarias de una manera grafica y sencilla.",
       details:
-        "Este programa utiliza localStorage por lo que los cambios persisten en el ordenador del usuario.",
+        "Este programa utiliza localStorage por lo que los cambios persisten en el ordenador del usuario y drag and drop en sus componentes para una experiencia rapida e intuitiva.",
       tecnologies: "",
-      link: "https://example.com/todo-app",
+      link: "https://tabla-de-procesos.vercel.app/",
       github: "https://github.com/yourusername/todo-app",
-      images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png"],
+      images:["/fotosProyectos/tabla/foto1.png", "/fotosProyectos/tabla/foto2.png"],
       tags: [TAGS.REACT, TAGS.CSS , TAGS.VITE, TAGS.VERCEL],
     },
 
@@ -124,10 +125,10 @@ const Proyectos = () =>{
 
   return (
     <>
-      {PROJECTS.slice(0, showAll ? PROJECTS.length : 4).map(({ title, description, tags, details, tecnologies, images, idItem }) => (
+      {PROJECTS.slice(0, showAll ? PROJECTS.length : 4).map(({ title, description, tags, details, tecnologies, images, idItem, link }) => (
         <article className="mb-8 mt-8" key={idItem}>
           <div className="flex">
-            <h3 className="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <a className="text-2xl font-semibold text-yellow-200 mb-2 transition-all duration-300 ease-in-out transform hover:scale-110 cursor-pointer" href={link} target='_blank'>{title}</a>
           </div>
           <ul className="flex gap-x-4 flex-row mb-5 mt-3">
             {tags.map((tag, index) => (
@@ -136,8 +137,11 @@ const Proyectos = () =>{
               </li>
             ))}
           </ul>
-          <p className="text-md mb-4 text-pretty">{description}</p>
-          <p className="text-md mb-4 text-pretty">{details}</p>
+          <p className="text-md mb-4 text-pretty"><span className='text-yellow-200 font-bold'>Descripcion: </span>{description}</p>
+          {
+            details? 
+          <p className="text-md mb-4 text-pretty"><span className='text-yellow-200 font-bold'>Detalles adicionales: </span>{details}</p> : null
+          }
           <p className="text-md mb-4 text-pretty">{tecnologies}</p>
           <PngFlotante images={images} />
         </article>
