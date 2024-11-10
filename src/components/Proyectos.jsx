@@ -116,27 +116,42 @@ const Proyectos = () =>{
     },
 
   ];
-  
-  return(
+  // Estado para controlar la cantidad de proyectos mostrados
+  const [showAll, setShowAll] = useState(false);
+
+  // Función para alternar entre mostrar todos o solo 4 proyectos
+  const toggleShowAll = () => setShowAll(!showAll);
+
+  return (
     <>
-  {PROJECTS.map(({ title, description, tags, details, tecnologies, images,index }) => (
-    <article class="mb-8 mt-8" key={index}>
-      <div class="flex">
-        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      {PROJECTS.slice(0, showAll ? PROJECTS.length : 4).map(({ title, description, tags, details, tecnologies, images, idItem }) => (
+        <article className="mb-8 mt-8" key={idItem}>
+          <div className="flex">
+            <h3 className="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+          </div>
+          <ul className="flex gap-x-4 flex-row mb-5 mt-3">
+            {tags.map((tag, index) => (
+              <li key={index} className="transition-all duration-300 ease-in-out transform hover:scale-125 hover:filter hover:brightness-125">
+                <img className="size-10" src={tag.ruta} alt={tag.name} />
+              </li>
+            ))}
+          </ul>
+          <p className="text-md mb-4 text-pretty">{description}</p>
+          <p className="text-md mb-4 text-pretty">{details}</p>
+          <p className="text-md mb-4 text-pretty">{tecnologies}</p>
+          <PngFlotante images={images} />
+        </article>
+      ))}
+      <div className='flex justify-center mt-6'>
+        <button
+          onClick={toggleShowAll}
+          className="text-yellow-200 hover:text-yellow-300"
+        >
+          {showAll ? "Ver menos proyectos" : "Ver más proyectos"}
+        </button>
       </div>
-      <ul class="flex gap-x-4 flex-row mb-5 mt-3">
-        {tags.map((tag, index) => (
-          <li key={index} class="transition-all duration-300 ease-in-out transform hover:scale-125 hover:filter hover:brightness-125">
-            <img class="size-10" src={tag.ruta} alt={tag.name} />
-          </li>
-        ))}
-      </ul>
-      <p class="text-md mb-4 text-pretty">{description}</p>
-      <p class="text-md mb-4 text-pretty">{details}</p>
-      <p class="text-md mb-4 text-pretty">{tecnologies}</p>
-      <PngFlotante images={images}   />
-    </article>
-  ))}</>)
+
+    </>)
 }
 
 export default Proyectos
