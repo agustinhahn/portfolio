@@ -1,0 +1,64 @@
+---
+const TAGS = [
+    { name: "icono js", ruta: "/js.svg" },
+    { name: "icono react", ruta: "/react.svg" },
+    { name: "icono node", ruta: "/node.svg" },
+    { name: "icono css", ruta: "/css.svg" },
+    { name: "icono redux", ruta: "/redux.svg" },
+    { name: "icono PYTHON", ruta: "/python.svg" },
+    { name: "icono FIREBASE", ruta: "/firebase.svg" },
+    { name: "icono tailwind", ruta: "/tailwind.svg" },
+    { name: "icono bootstrap", ruta: "/bootstrap.svg" },
+  { name: "icono vite", ruta: "/vite.svg" },
+  { name: "icono reactnative", ruta: "/reactnative.svg" },
+  { name: "icono expo", ruta: "/expo.svg" },
+  { name: "icono notion", ruta: "/notion.svg" },
+];
+---
+
+<article class="article-scroll">
+  <div class="scroll-container">
+    {TAGS.map((s, index) => (
+      <img
+        class="size-14 mt-7 transition-all duration-300 ease-in-out transform hover:scale-125 hover:filter hover:brightness-125"
+        src={s.ruta}
+        alt={s.name}
+      />
+    ))}
+    {/* Repetimos las imágenes para un bucle más suave */}
+    {TAGS.map((s, index) => (
+      <img
+        class="size-14 mt-7 transition-all duration-300 ease-in-out transform hover:scale-125 hover:filter hover:brightness-125"
+        src={s.ruta}
+        alt={s.name}
+      />
+    ))}
+  </div>
+</article>
+
+
+<style>
+
+.article-scroll {
+  overflow: hidden;
+  display: flex;
+  gap: 1rem;
+}
+
+.scroll-container {
+  display: flex;
+  gap: 1rem;
+  animation: scroll 40s linear infinite;
+  padding: 20px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+</style>

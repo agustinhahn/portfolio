@@ -22,6 +22,8 @@ import About from "../components/About.astro"
 import Proyectos from "../components/Proyectos"
 import EfectoEscritura from "../components/EfectoEscritura";
 import PngFlotante from "../components/PngFlotante";
+import Readicon from "../icons/Readicon.astro";
+import Skills from "../components/Skills.astro";
 
 ---
 
@@ -35,21 +37,32 @@ import PngFlotante from "../components/PngFlotante";
 		<SectionContainer>
 			<div class="flex mb-7">
 				<img
-					class="rounded-full size-15 mr-6"
-					src="https://img.olympics.com/images/image/private/t_1-1_300/f_auto/v1687307644/primary/cqxzrctscdr8x47rly1g"
-					alt="linyefoto"
-				/>
+				class="rounded-full fotoperfil mr-6"
+				src="https://avatars.githubusercontent.com/u/125411798?v=4"
+				alt="linyefoto"
+			/>
 				<div class="flex flex-col justify-center min-w-96">
 					<EfectoEscritura client:load/>
 				</div>
 			</div>
 			<Presentacion />
 		</SectionContainer>
-		<SectionContainer id="proyectos">
+		<SectionContainer>
 			<h2
 				class="text-4xl font-semibold mb-6 flex gap-x-3 items-center"
 			>
 				<ProyectosIcon class="size-7" />
+				Skilss
+			</h2>
+			<section class="flex flex-wrap justify-center">
+				<Skills />
+			</section>
+		</SectionContainer>
+		<SectionContainer id="proyectos">
+			<h2
+				class="text-4xl font-semibold mb-6 flex gap-x-3 items-center"
+			>
+				<Maleta class="size-7" />
 				Proyectos
 			</h2>
 			<section class="flex flex-wrap justify-center">
@@ -58,7 +71,7 @@ import PngFlotante from "../components/PngFlotante";
 		</SectionContainer>
 		<SectionContainer id="experiencia">
 			<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
-				<Maleta class="size-7" />
+				<Readicon class="size-7" />
 				Experiencia Academica
 			</h2>
 			<Experience />
@@ -77,5 +90,10 @@ import PngFlotante from "../components/PngFlotante";
 <style>
 	.fontSize {
 		font-size: 15px;
+	}
+
+	.fotoperfil{
+		width: 260px;
+		height: 260px;
 	}
 </style>
