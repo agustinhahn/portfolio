@@ -24,6 +24,7 @@ import EfectoEscritura from "../components/EfectoEscritura";
 import PngFlotante from "../components/PngFlotante";
 import Readicon from "../icons/Readicon.astro";
 import Skills from "../components/Skills.astro";
+import ButtonSubir from "../components/ButtonSubir.astro";
 
 ---
 
@@ -52,7 +53,7 @@ import Skills from "../components/Skills.astro";
 				class="text-4xl font-semibold mb-6 flex gap-x-3 items-center"
 			>
 				<ProyectosIcon class="size-7" />
-				Skilss
+				Habilidades
 			</h2>
 			<section class="flex flex-wrap justify-center">
 				<Skills />
@@ -83,7 +84,8 @@ import Skills from "../components/Skills.astro";
 			</h2>
 			<About />
 		</SectionContainer>
-		<a class="fixed bottom-4 right-4 opacity-50 bg-gray-700 text-white px-4 py-2 rounded-lg shadow transition-colors hover:bg-yellow-200/50" href="#nav">Volver arriba</a>
+		<ButtonSubir />
+
 	</main>
 </Layout>
 

@@ -5,6 +5,7 @@ const TAGS = [
     { name: "icono node", ruta: "/node.svg" },
     { name: "icono css", ruta: "/css.svg" },
     { name: "icono redux", ruta: "/redux.svg" },
+    { name: "icono astro", ruta: "/astro.svg" },
     { name: "icono PYTHON", ruta: "/python.svg" },
     { name: "icono FIREBASE", ruta: "/firebase.svg" },
     { name: "icono tailwind", ruta: "/tailwind.svg" },
@@ -13,6 +14,7 @@ const TAGS = [
   { name: "icono reactnative", ruta: "/reactnative.svg" },
   { name: "icono expo", ruta: "/expo.svg" },
   { name: "icono notion", ruta: "/notion.svg" },
+  { name: "icono mysql", ruta: "/mysql.svg" },
 ];
 ---
 
@@ -20,7 +22,7 @@ const TAGS = [
   <div class="scroll-container">
     {TAGS.map((s, index) => (
       <img
-        class="size-14 mt-7 transition-all duration-300 ease-in-out transform hover:scale-125 hover:filter hover:brightness-125"
+        class="size-14 mt-7 filter grayscale transition-all duration-300 ease-in-out transform hover:scale-125 hover:grayscale-0 hover:brightness-125"
         src={s.ruta}
         alt={s.name}
       />
@@ -28,7 +30,7 @@ const TAGS = [
     {/* Repetimos las imágenes para un bucle más suave */}
     {TAGS.map((s, index) => (
       <img
-        class="size-14 mt-7 transition-all duration-300 ease-in-out transform hover:scale-125 hover:filter hover:brightness-125"
+        class="size-14 mt-7 filter grayscale transition-all duration-300 ease-in-out transform hover:scale-125 hover:grayscale-0 hover:brightness-125"
         src={s.ruta}
         alt={s.name}
       />

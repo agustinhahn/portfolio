@@ -32,7 +32,7 @@ const PngFlotante = ({ images}) => {
       {imagenesMostradas.map((src, index) => (
         <img
           key={index}
-          style={{ width: "450px" }}
+          style={{ maxWidth: "450px" }}
           className="transition-all duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-150"
           src={src}
           alt={`Imagen flotante ${index + 1}`}
