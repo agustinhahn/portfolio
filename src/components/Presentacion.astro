@@ -5,7 +5,7 @@ import MailIcon from "../icons/MailIcon.astro"
 import GithubIcon from "../icons/GithubIcon.astro"
 ---
 
-<h2 class="text-xl lg:text-2xl text-wrap max-w-[900px]">
+<h2 class="text-xl lg:text-2xl text-wrap max-w-[900px] presenText">
     <span>
         +1 año de experiencia aprendiendo y creando proyectos
         resolutivos.</span
@@ -15,7 +15,7 @@ import GithubIcon from "../icons/GithubIcon.astro"
     </span>
     <span class="text-blue-100/70"> de Rosario, argentina. </span>
 </h2>
-<nav class="flex gap-4 mt-8 flex-wrap">
+<nav class="flex gap-4 mt-8 flex-wrap presenTag">
     <SocialPill
         href="https://www.linkedin.com/in/agustin-hahn-766b98183/"
     >
@@ -31,3 +31,19 @@ import GithubIcon from "../icons/GithubIcon.astro"
         <span class="fontSize">agustin.f.hahn@gmail.com</span>
     </SocialPill>
 </nav>
+
+<style>
+    .presenTag{
+        @media(max-width:870px){
+            margin-top: 20px;
+            margin-bottom: 20px;
+            justify-content: center;
+            gap:20px
+        }
+    }
+    .presenText{
+        @media(max-width:870px){
+            text-align: center;
+        }
+    }
+</style>

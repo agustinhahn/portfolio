@@ -6,7 +6,11 @@ export default {
 ],
 	darkMode:"class",
 	theme: {
-		extend: {},
+		extend: {
+			screens: {
+				'max-870': { 'max': '870px' }, // Media query para un max-width de 870px
+			},
+		},
 	},
 	plugins: [
 		require('flowbite/plugin')

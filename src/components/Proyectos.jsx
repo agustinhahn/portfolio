@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import PngFlotante from './PngFlotante';
+import "./proyectos.css"
 
 const Proyectos = () =>{
   const TAGS = {
@@ -126,7 +127,7 @@ const Proyectos = () =>{
   return (
     <>
       {PROJECTS.slice(0, showAll ? PROJECTS.length : 4).map(({ title, description, tags, details, tecnologies, images, idItem, link }) => (
-        <article className="mb-8 mt-8" key={idItem}>
+        <article className="mb-8 mt-8 max-w-full" key={idItem}>
           <div className="flex">
             <a className="text-2xl font-semibold text-yellow-200 mb-2 transition-all duration-300 ease-in-out transform hover:scale-110 cursor-pointer" href={link} target='_blank'>{title}</a>
           </div>
@@ -157,5 +158,7 @@ const Proyectos = () =>{
 
     </>)
 }
+
+
 
 export default Proyectos

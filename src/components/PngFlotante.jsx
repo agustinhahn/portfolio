@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Arrow from "./Arrow";
+import "./pngflotante.css"
 
 const PngFlotante = ({ images}) => {
 
@@ -28,12 +29,11 @@ const PngFlotante = ({ images}) => {
   ];
 
   return (
-    <div className="flex gap-8 mt-8">
+    <div className="flex gap-8 mt-8 max-w-full divPng">
       {imagenesMostradas.map((src, index) => (
         <img
           key={index}
-          style={{ maxWidth: "450px" }}
-          className="transition-all duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-150"
+          className="transition-all duration-300 ease-in-out transform hover:scale-110 hover:filter hover:brightness-150 imgStyle"
           src={src}
           alt={`Imagen flotante ${index + 1}`}
         />

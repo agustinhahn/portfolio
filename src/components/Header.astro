@@ -1,8 +1,41 @@
-<header id="nav" class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto">
-    <nav class="flex flex-row gap-x-10 opacity-80">
-        <a class="transition-colors hover:text-yellow-200/90" href="/">Inicio</a>
-        <a class="transition-colors hover:text-yellow-200/90" href="#proyectos">Proyectos</a>
-        <a class="transition-colors hover:text-yellow-200/90" href="#experiencia">Experiencia</a>
-        <a class="transition-colors hover:text-yellow-200/90" href="#about">Sobre mi</a>
+<header id="nav" class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto navstyle">
+    <!-- Botón de menú hamburguesa en móviles -->
+    <div class="flex items-center sm:hidden">
+      <button id="menu-toggle" type="button" class="text-gray-500 hover:text-yellow-200/90 focus:outline-none transition-colors">
+        <!-- Icono de menú cerrado -->
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Navegación para pantallas grandes -->
+    <nav class="hidden sm:flex flex-row gap-x-10 opacity-80">
+      <a class="transition-colors hover:text-yellow-200/90" href="/">Inicio</a>
+      <a class="transition-colors hover:text-yellow-200/90" href="#proyectos">Proyectos</a>
+      <a class="transition-colors hover:text-yellow-200/90" href="#experiencia">Experiencia</a>
+      <a class="transition-colors hover:text-yellow-200/90" href="#about">Sobre mí</a>
     </nav>
-</header>
+  
+    <!-- Navegación desplegable para pantallas móviles -->
+    <div id="mobile-menu" class="hidden flex-col items-center w-full mt-4 sm:hidden">
+      <a class="block py-2 transition-colors hover:text-yellow-200/90" href="/">Inicio</a>
+      <a class="block py-2 transition-colors hover:text-yellow-200/90" href="#proyectos">Proyectos</a>
+      <a class="block py-2 transition-colors hover:text-yellow-200/90" href="#experiencia">Experiencia</a>
+      <a class="block py-2 transition-colors hover:text-yellow-200/90" href="#about">Sobre mí</a>
+    </div>
+  </header>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+  
+      // Verifica que `menuToggle` no sea null
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>

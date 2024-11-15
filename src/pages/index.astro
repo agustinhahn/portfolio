@@ -36,7 +36,7 @@ import ButtonSubir from "../components/ButtonSubir.astro";
 >
 	<main class="px-4">
 		<SectionContainer>
-			<div class="flex mb-7">
+			<div class="flex mb-7 divFotoPresentacion">
 				<img
 				class="rounded-full fotoperfil mr-6"
 				src="https://avatars.githubusercontent.com/u/125411798?v=4"
@@ -97,5 +97,12 @@ import ButtonSubir from "../components/ButtonSubir.astro";
 	.fotoperfil{
 		width: 260px;
 		height: 260px;
+	}
+	.divFotoPresentacion{
+		@media(max-width:870px){
+			flex-direction: column;
+			gap: 30px;
+			align-items: center;
+		}
 	}
 </style>
