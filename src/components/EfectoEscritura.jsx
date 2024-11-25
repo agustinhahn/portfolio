@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
     const EfectoEscritura = () => {
     const [text, setText] = useState("");
@@ -36,7 +36,7 @@ import React, { useEffect, useState } from "react";
     }, [text, isDeleting, typingSpeed, loopNum, phrases]);
 
     return (
-        <p class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-1 items-center">{text}</p> // Usa la clase que ya tienes
+        <p className="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-1 items-center">{text}</p> // Usa la clase que ya tienes
     );
     };
 

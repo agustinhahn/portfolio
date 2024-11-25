@@ -3,57 +3,57 @@ import "./arrow.css"
 const Arrow = ({avanzar}) => {
   return (
     <>
-<button class="button" onClick={()=>{avanzar()}}>
-  <div class="line one">
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
+<button className="button" onClick={()=>{avanzar()}}>
+  <div className="line one">
+    <div className="round"></div>
+    <div className="round"></div>
+    <div className="round"></div>
+    <div className="round"></div>
 
   </div>
-  <div class="line two">
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
+  <div className="line two">
+    <div className="round"></div>
+    <div className="round"></div>
+    <div className="round"></div>
+    <div className="round"></div>
 
   </div>
-  <div class="line three">
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
+  <div className="line three">
+    <div className="round"></div>
+    <div className="round"></div>
+    <div className="round"></div>
+    <div className="round"></div>
 
   </div>
-    <div class="line four">
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-
-  </div>
-    
-    <div class="line five">
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
+    <div className="line four">
+    <div className="round"></div>
+    <div className="round"></div>
+    <div className="round"></div>
+    <div className="round"></div>
 
   </div>
     
-    <div class="line six">
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
+    <div className="line five">
+    <div className="round"></div>
+    <div className="round"></div>
+    <div className="round"></div>
+    <div className="round"></div>
 
   </div>
     
-    <div class="line seven">
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
-    <div class="round"></div>
+    <div className="line six">
+    <div className="round"></div>
+    <div className="round"></div>
+    <div className="round"></div>
+    <div className="round"></div>
+
+  </div>
+    
+    <div className="line seven">
+    <div className="round"></div>
+    <div className="round"></div>
+    <div className="round"></div>
+    <div className="round"></div>
 
   </div>
 </button></>
