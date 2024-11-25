@@ -42,7 +42,7 @@ import ButtonSubir from "../components/ButtonSubir.astro";
 				src="https://avatars.githubusercontent.com/u/125411798?v=4"
 				alt="linyefoto"
 			/>
-				<div class="flex flex-col justify-center min-w-96">
+				<div class="flex flex-col justify-center min-w-72">
 					<EfectoEscritura client:load/>
 				</div>
 			</div>
@@ -98,11 +98,11 @@ import ButtonSubir from "../components/ButtonSubir.astro";
 		width: 260px;
 		height: 260px;
 	}
-	.divFotoPresentacion{
-		@media(max-width:870px){
+	@media(max-width:870px){
+		.divFotoPresentacion{
 			flex-direction: column;
 			gap: 30px;
 			align-items: center;
 		}
-	}
+		}
 </style>
