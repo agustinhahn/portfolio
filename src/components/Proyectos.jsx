@@ -30,7 +30,7 @@ const Proyectos = () =>{
       details:
         "Este proyecto fue realizado junto con un desarrollador backend (JAVA + MySql) y una diseñadora grafica.",
       tecnologies: "",
-      link: "https://escape-room-bay.vercel.app/",
+      link: "https://escape-room-two-tau.vercel.app/",
       github: "https://github.com/yourusername/weather-app",
       images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png", "/fotosProyectos/escaperoom/foto4.png"],      tags: [
         TAGS.REACT,
