@@ -26,11 +26,11 @@ const Proyectos = () =>{
       idItem: 1,
       title: "Escape room",
       description:
-        "Proyecto freelance - Consiste en una web hecha a medida para un negocio de la ciudad de Rosario. Cuenta con interface interactiva, reserva de turnos y panel admin.",
+        "Proyecto freelance - Consiste en una web hecha a medida para un negocio de la ciudad de Rosario. Cuenta con interface interactiva, reserva de turnos y panel administrador que gestiona: turnos dinamicos por fecha, promociones/descuentos, visualizacion y obtencion de metricas, etc.",
       details:
-        "Este proyecto fue realizado junto con un desarrollador backend (JAVA + MySql) y una diseñadora grafica.",
+        "Este proyecto fue realizado junto con Lautaro Favoni - backend (JAVA + MySql) y Celina Bruno - diseñadora grafica.",
       tecnologies: "",
-      link: "https://escape-room-two-tau.vercel.app/",
+      link: "https://www.lockandkey.com.ar/",
       github: "https://github.com/yourusername/weather-app",
       images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png", "/fotosProyectos/escaperoom/foto4.png"],      tags: [
         TAGS.REACT,
@@ -158,6 +158,7 @@ const Proyectos = () =>{
 
     </>)
 }
+
 
 
 
