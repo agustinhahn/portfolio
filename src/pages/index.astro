@@ -25,6 +25,7 @@ import PngFlotante from "../components/PngFlotante";
 import Readicon from "../icons/Readicon.astro";
 import Skills from "../components/Skills.astro";
 import ButtonSubir from "../components/ButtonSubir.astro";
+import DevStack from "../components/DevStack.astro";
 
 ---
 
@@ -38,7 +39,7 @@ import ButtonSubir from "../components/ButtonSubir.astro";
 		<SectionContainer>
 			<div class="flex mb-7 divFotoPresentacion">
 				<img
-				class="rounded-full fotoperfil mr-6"
+				class="rounded-full fotoperfil mr-6 transition-all duration-300 border-4 border-transparent hover:border-yellow-200 hover:shadow-[0_0_30px_rgba(253,224,71,0.6)] cursor-pointer hover:scale-105"
 				src="https://avatars.githubusercontent.com/u/125411798?v=4"
 				alt="linyefoto"
 			/>
@@ -50,7 +51,7 @@ import ButtonSubir from "../components/ButtonSubir.astro";
 		</SectionContainer>
 		<SectionContainer>
 			<h2
-				class="text-4xl font-semibold mb-6 flex gap-x-3 items-center"
+				class="text-4xl font-semibold mb-6 flex gap-x-3 items-center transition-all duration-300 hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)] hover:scale-105 origin-left w-fit cursor-default"
 			>
 				<ProyectosIcon class="size-7" />
 				Habilidades
@@ -61,7 +62,7 @@ import ButtonSubir from "../components/ButtonSubir.astro";
 		</SectionContainer>
 		<SectionContainer id="proyectos">
 			<h2
-				class="text-4xl font-semibold mb-6 flex gap-x-3 items-center"
+				class="text-4xl font-semibold mb-6 flex gap-x-3 items-center transition-all duration-300 hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)] hover:scale-105 origin-left w-fit cursor-default"
 			>
 				<Maleta class="size-7" />
 				Proyectos
@@ -70,15 +71,18 @@ import ButtonSubir from "../components/ButtonSubir.astro";
 				<Proyectos client:load/>
 			</section>
 		</SectionContainer>
+        <SectionContainer>
+            <DevStack />
+        </SectionContainer>
 		<SectionContainer id="experiencia">
-			<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center transition-all duration-300 hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)] hover:scale-105 origin-left w-fit cursor-default">
 				<Readicon class="size-7" />
-				Experiencia Academica
+				Experiencia Academica dev
 			</h2>
 			<Experience />
 		</SectionContainer>
 		<SectionContainer id="about">
-			<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center transition-all duration-300 hover:text-white hover:drop-shadow-[0_0_10px_rgba(255,255,255,1)] hover:scale-105 origin-left w-fit cursor-default">
 				<UserIcon class="size-7" />
 				Sobre mi
 			</h2>

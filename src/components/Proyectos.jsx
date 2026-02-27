@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import PngFlotante from './PngFlotante';
 import "./proyectos.css"
@@ -30,7 +29,8 @@ const Proyectos = () =>{
       details:
         "Este proyecto fue realizado junto con Lautaro Favoni - backend (JAVA + MySql) y Celina Bruno - diseñadora grafica.",
       tecnologies: "",
-      link: "https://www.lockandkey.com.ar/",
+      categoria: "WEB APPS",
+      link: "https://lockandkey.com.ar/",
       github: "https://github.com/yourusername/weather-app",
       images:["/fotosProyectos/escaperoom/foto1.png", "/fotosProyectos/escaperoom/foto2.png", "/fotosProyectos/escaperoom/foto3.png", "/fotosProyectos/escaperoom/foto4.png"],      tags: [
         TAGS.REACT,
@@ -48,6 +48,7 @@ const Proyectos = () =>{
         "Solucion para empresa proveedora de internet que requeria almacenar y acceder de manera rapida a informacion y respuestas pre-establecidas que se guardan en el copiapapeles de la PC con un solo click sobre el titulo, ademas del boton '+' que sirve para ver el contenido.",
       details: "",
       tecnologies: "",
+      categoria: "WEB APPS",
       link: "https://respuestas-rapidas.vercel.app/",
       github: "https://github.com/yourusername/personal-blog",
       images:["/fotosProyectos/respuestasrapidas/foto1.png", "/fotosProyectos/respuestasrapidas/foto2.png"],
@@ -60,6 +61,7 @@ const Proyectos = () =>{
         "Proyecto personal desarrollado en react native con la simple funcion de llevar el recuento de puntos en un partido de truco. Se implementaron diseños a medida y sonidos alusivos a un grupo en concreto de personas.",
       details: "Este proyecto fue realizado junto con una diseñadora grafica.",
       tecnologies: "",
+      categoria: "WEB APPS",
       link: "https://github.com/agustinhahn/contadorTrucoRN",
       github: "https://github.com/yourusername/todo-app",
       images:["/fotosProyectos/truco/foto1.png", "/fotosProyectos/truco/foto2.png"],
@@ -73,6 +75,7 @@ const Proyectos = () =>{
       details:
         "La importancia en este proyecto recae en que fue con un grupo multidisciplinario el cual se conformaba por 1 ux, 4 backend, 4 front y un product manager. Aqui adquiri herramientas como JIRA y NOTION para la organizacion.",
       tecnologies: "",
+      categoria: "WEB APPS",
       link: "",
       github: "https://github.com/yourusername/todo-app",
       images:["/fotosProyectos/agendasalud/foto1.png", "/fotosProyectos/agendasalud/foto2.png"],
@@ -85,6 +88,7 @@ const Proyectos = () =>{
         "Solucion para empresa proveedora de internet que requeria informes via email tras cierta incidencia tecnica relacionada con FTTH.",
       details: "Desarrollado con NODEjs y utilizado en varios ISP locales.",
       tecnologies: "",
+      categoria: "SCRIPTS",
       link: "https://github.com/agustinhahn/scriptlost",
       github: "https://github.com/yourusername/todo-app",
       images:[""],
@@ -98,6 +102,7 @@ const Proyectos = () =>{
       details:
         "Desarrollado con python aunque luego se llevo a una version mas simple en bash.",
       tecnologies: "",
+      categoria: "SCRIPTS",
       link: "",
       github: "https://github.com/yourusername/todo-app",
       images:["/fotosProyectos/easyip/foto1.png", "/fotosProyectos/easyip/foto2.png"],
@@ -111,6 +116,7 @@ const Proyectos = () =>{
       details:
         "Este programa utiliza localStorage por lo que los cambios persisten en el ordenador del usuario y drag and drop en sus componentes para una experiencia rapida e intuitiva.",
       tecnologies: "",
+      categoria: "WEB APPS",
       link: "https://tabla-de-procesos.vercel.app/",
       github: "https://github.com/yourusername/todo-app",
       images:["/fotosProyectos/tabla/foto1.png", "/fotosProyectos/tabla/foto2.png"],
@@ -120,13 +126,41 @@ const Proyectos = () =>{
   ];
   // Estado para controlar la cantidad de proyectos mostrados
   const [showAll, setShowAll] = useState(false);
+  const [filter, setFilter] = useState('TODOS');
 
   // Función para alternar entre mostrar todos o solo 4 proyectos
   const toggleShowAll = () => setShowAll(!showAll);
 
+  const filteredProjects = PROJECTS.filter((project) => {
+    if (filter === 'TODOS') return true;
+    return project.categoria === filter;
+  });
+
+  const projectsToDisplay = filteredProjects.slice(0, showAll ? filteredProjects.length : 4);
+
   return (
-    <>
-      {PROJECTS.slice(0, showAll ? PROJECTS.length : 4).map(({ title, description, tags, details, tecnologies, images, idItem, link }) => (
+    <div className="w-full">
+      <div className="flex flex-wrap justify-center gap-4 mb-4 mt-2">
+        <button
+          onClick={() => setFilter('TODOS')}
+          className={`px-4 py-2 rounded-full font-semibold transition-all duration-300 ${filter === 'TODOS' ? 'bg-yellow-200 text-slate-900 border-2 border-transparent' : 'bg-transparent text-yellow-200 border-2 border-yellow-200 hover:bg-yellow-200/20'}`}
+        >
+          TODOS
+        </button>
+        <button
+          onClick={() => setFilter('WEB APPS')}
+          className={`px-4 py-2 rounded-full font-semibold transition-all duration-300 ${filter === 'WEB APPS' ? 'bg-yellow-200 text-slate-900 border-2 border-transparent' : 'bg-transparent text-yellow-200 border-2 border-yellow-200 hover:bg-yellow-200/20'}`}
+        >
+          WEB APPS
+        </button>
+        <button
+          onClick={() => setFilter('SCRIPTS')}
+          className={`px-4 py-2 rounded-full font-semibold transition-all duration-300 ${filter === 'SCRIPTS' ? 'bg-yellow-200 text-slate-900 border-2 border-transparent' : 'bg-transparent text-yellow-200 border-2 border-yellow-200 hover:bg-yellow-200/20'}`}
+        >
+          SCRIPTS
+        </button>
+      </div>
+      {projectsToDisplay.map(({ title, description, tags, details, tecnologies, images, idItem, link }) => (
         <article className="mb-8 mt-8 max-w-full" key={idItem}>
           <div className="flex">
             <a className="text-2xl font-semibold text-yellow-200 mb-2 transition-all duration-300 ease-in-out transform hover:scale-110 cursor-pointer" href={link} target='_blank'>{title}</a>
@@ -134,7 +168,7 @@ const Proyectos = () =>{
           <ul className="flex gap-x-4 flex-row mb-5 mt-3">
             {tags.map((tag, index) => (
               <li key={index} className="transition-all duration-300 ease-in-out transform hover:scale-125 hover:filter hover:brightness-125">
-                <img className="size-10" src={tag.ruta} alt={tag.name} />
+                <img className="size-10" title={tag.name} src={tag.ruta} alt={tag.name} />
               </li>
             ))}
           </ul>
@@ -147,16 +181,17 @@ const Proyectos = () =>{
           <PngFlotante images={images} />
         </article>
       ))}
-      <div className='flex justify-center mt-6'>
-        <button
-          onClick={toggleShowAll}
-          className="text-yellow-200 hover:text-yellow-300"
-        >
-          {showAll ? "Ver menos proyectos" : "Ver más proyectos"}
-        </button>
-      </div>
-
-    </>)
+      {filteredProjects.length > 4 && (
+        <div className='flex justify-center mt-6'>
+          <button
+            onClick={toggleShowAll}
+            className="text-yellow-200 hover:text-yellow-300 transition-all font-semibold"
+          >
+            {showAll ? "Ver menos proyectos" : "Ver más proyectos"}
+          </button>
+        </div>
+      )}
+    </div>)
 }
 
 
